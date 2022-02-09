@@ -127,7 +127,7 @@ public static class AndroidRuntimePermissions
 #endif
 	}
 
-	private static void RequestPermissionAsync( string permission, PermissionResult callback )
+	public static void RequestPermissionAsync( string permission, PermissionResult callback )
 	{
 #if IS_ANDROID_PLATFORM
 		RequestPermissionsAsync( new string[1] { permission }, ( permissions, result ) =>
@@ -141,7 +141,7 @@ public static class AndroidRuntimePermissions
 #endif
 	}
 
-	private static void RequestPermissionsAsync( string[] permissions, PermissionResultMultiple callback )
+	public static void RequestPermissionsAsync( string[] permissions, PermissionResultMultiple callback )
 	{
 		ValidateArgument( permissions );
 
